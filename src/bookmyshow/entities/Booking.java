@@ -5,13 +5,13 @@ import java.util.UUID;
 
 public class Booking {
     private UUID bookingId;
-    private List<Integer> seats;
+    private List<String> seats;
    private Show show;
    private User user;
    private Payment payment;
-    public Booking(List<Integer>seats, Show show,User user,Payment payment){
+    public Booking(List<Seat>seats, Show show,User user,Payment payment){
            this.bookingId=UUID.randomUUID();
-           this.seats=seats;
+           this.seats=seats.stream().map(Seat::getSeatId).toList();
            this.show=show;
             this.user=user;
              this.payment=payment;
@@ -21,7 +21,7 @@ public class Booking {
         return bookingId;
     }
 
-    public List<Integer> getSeats() {
+    public List<String> getSeats() {
         return seats;
     }
 
