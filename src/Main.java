@@ -1,8 +1,44 @@
 import Loggerlld.Logger;
+import VendingMachine.entity.Inventory;
 
 public class Main {
     public static void main(String[] args) {
-        Logger logger =new Logger();
-        logger.info("this is a info");
+                  //
+
+        Player{
+            PlayingPiece,
+            playername,
+            playerId;
+        }
+        PlayeingPiece{
+            Color color;
+            Cell position;
+        }
+
+        Dice{
+             int maxValue;
+           int  rollDice ()
+        }
+
+        Board {
+            Cell[][]=new Cell[10][10];
+
+        }
+        Cell{
+            int row, int col;
+            Jump jump;
+
+        }
+        Jump{
+            Cell from;
+             Cell to;
+
+        }
+
+        GameClass{
+            initializeGame();
+             addLadders,addSnakes;
+             startGame();
+        }
     }
 }
